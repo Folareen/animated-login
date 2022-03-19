@@ -1,0 +1,169 @@
+body{
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    width: 100%;
+}
+
+/* section */
+.section{
+    width:100vw;
+    height: 100vh;
+    background: linear-gradient(-30deg,#03a9f4 0%,#3a78b7 50%,#262626 50%,#607d8b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation-name:animate;
+    animation-delay: 3s;
+    animation-duration:5s;
+    animation-iteration-count: infinite;
+}
+@keyframes animate{
+    from{
+        filter: hue-rotate(0);
+    }
+    to{
+        filter:hue-rotate(360deg)
+    }
+}
+
+/* container */
+.form-container{
+    min-width: 30%;
+    min-height: 50%;
+    background-color: rgba(240, 240, 237, 0.3);
+    padding: 20px 30px;
+    border: 4px solid rgba(240, 240, 237, 0.1);
+    border-radius: 5px;
+    width: 200px;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    animation-name: display;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    /* border: 2px solid red; */
+    box-sizing: content-box;
+}
+@keyframes display{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+h1{
+    width: 100%;
+    text-align: center;
+    color: rgb(72, 72, 104);
+    font-weight: 600;
+    font-size: 2.5em;
+    font-weight: bold;
+    padding: 0;
+    margin: 0 0 40px 0;
+    letter-spacing: .5px;
+    font-style: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* input */
+form{
+    position: relative;
+    border-top: 1px solid white;
+}
+.fa-circle-user{
+    position: absolute;
+    height: max-content;
+    width: max-content;
+    top: -32px;
+    right: 50%;
+    transform: translate(50%, 50%);
+    font-size: 2em;
+}
+.form-container div.input-container{
+    width:100%;
+    border: 1px solid rgba(247, 246, 242, 0.5);
+    border-radius: 5px;
+    padding: 5px 0 3px 6px;
+    margin: 20px 0;
+    box-sizing: border-box;
+    height: 100%;
+    font-size: 14px;
+    background: transparent;
+    position: relative;
+}
+.input-container:first-of-type{
+    margin-top: 35px !important;
+}
+/* .form-container div.input-container i{
+    transform: scale();
+} */
+.form-container div .user{
+    background: none;
+    outline: none;
+    border: none;
+    background: transparent;
+    color: #ffffff;
+    font-weight: 700;
+    padding: 7.5px 20px;
+}
+.fa-user{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+}
+.fa-lock{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+}
+
+.form-container div .user::placeholder{
+    color: white;
+}
+
+/*remember me */
+.form-container form .remember {
+    font-weight: 300;
+    display: inline-block;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+/* login */
+.form-container form input[type="submit"]{
+    display: block;
+    width: 100px;
+    color: rgba(44, 42, 42, 0.8);
+    height: 35px;
+    border: 1px solid rgba(240, 240, 237, 0.5);
+    outline: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: 800;
+}
+.form-container form input[type="submit"]:hover{
+    background-color: #4989ca ;
+    transition: .5s;
+    width: 105px;
+    height: 38px;
+}
+
+/* links */
+a{
+    color: white;
+}
+a:hover{
+    color:#607d8b
+}
+
+/* p */
+p{
+    font-size: 14px;
+    font-weight: 300;
+}

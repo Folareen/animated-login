@@ -1,0 +1,4 @@
+
+add some social icons
+welcome instead of login
+add login icon below welcome
