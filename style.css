@@ -112,6 +112,7 @@ form{
     width: 80%;
     height: 100%;
     text-overflow: ellipsis;
+    border-radius: 5px;
 }
 .fa-user{
     position: absolute;
@@ -192,7 +193,7 @@ p{
         font-size: 1em ;
     }
 }
-@media screen and (min-width:1024px) {
+@media screen and (min-width:1326px) {
     h1{
         font-size: 3em;
     }
@@ -212,4 +213,4 @@ p{
     label, p{
         font-size: 1.2em !important ;
     }
-}
+} 
