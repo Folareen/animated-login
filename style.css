@@ -26,7 +26,8 @@ main{
 
 /* container */
 .form-container{
-    min-width: 40%;
+    width: 60%;
+    /* max-width: 45%; */
     min-height: max-content;
     padding: 1em 1.8em;
     background-color: rgba(240, 240, 237, 0.3);
@@ -190,7 +191,10 @@ hr{
 }
 
 /* for desktop view */
-@media  screen and (min-width:767px){
+@media  screen and (min-width:426px){
+    .form-container{
+        max-width: 380px !important;
+    }
     h1{
         font-size: 2.5rem;
     }
@@ -202,7 +206,7 @@ hr{
         font-size: 2.5rem;
     }
     .user{
-        font-size: 1.2rem !important;
+        font-size: 1.1rem !important;
         font-weight: bold;
     }
     .fa-user, .fa-lock{
