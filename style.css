@@ -120,7 +120,7 @@ form{
 }
 
 .user::placeholder{
-    color: white;
+    color: rgb(168, 167, 167);
 }
 .remember {
     font-weight: 300;
@@ -193,7 +193,7 @@ hr{
 /* for desktop view */
 @media  screen and (min-width:426px){
     .form-container{
-        max-width: 380px !important;
+        max-width: 350px !important;
     }
     h1{
         font-size: 2.5rem;
@@ -213,7 +213,7 @@ hr{
         font-size: 1rem;
     }
     .remember {
-        font-size: 1.1rem ;
+        font-size: 1rem ;
     }
     input[type="submit"]{
         height: 2.5rem;
