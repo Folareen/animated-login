@@ -128,6 +128,8 @@ form{
     cursor: pointer;
     margin-bottom: 10px;
     font-size: 0.9rem;
+    display: flex;
+    align-items: center;
 }
 .form-container form input[type="submit"]{
     display: block;
@@ -144,16 +146,12 @@ form{
     background-color: rgb(73, 137, 202) ;
     transition: .5s;
 }
-
-/* links */
 a{
     color: rgb(255, 255, 255);
 }
 a:hover{
     color:rgb(96, 125, 139)
 }
-
-/* p */
 .forget, .need{
     font-size: 0.9rem;
     font-weight: 300;
@@ -177,14 +175,14 @@ hr{
     font-size: 1rem;
 }
 .icons{
-    max-width:45%;
+    width:50%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .icons i{
-    font-size: 1.6em;
+    font-size: 1.8em;
     color: lightgray;
 }
 .icons i:hover{
