@@ -74,7 +74,7 @@ form{
     transform: translate(50%, 50%);
     font-size: 2rem;
 }
-.form-container .input-container{
+.input-container{
     width:100%;
     border: 1px solid rgba(247, 246, 242, 0.5);
     border-radius: 5px;
@@ -91,7 +91,6 @@ form{
 .input-container:first-of-type{
     margin-top: 40px !important;
 }
-
 .form-container div .user{
     outline: none;
     border: none;
@@ -119,10 +118,10 @@ form{
     font-size: 0.8rem;
 }
 
-.form-container div .user::placeholder{
+.user::placeholder{
     color: white;
 }
-.form-container form .remember {
+.remember {
     font-weight: 300;
     display: inline-block;
     cursor: pointer;
@@ -131,7 +130,7 @@ form{
     display: flex;
     align-items: center;
 }
-.form-container form input[type="submit"]{
+input[type="submit"]{
     display: block;
     width: 100%;
     color: rgba(44, 42, 42, 0.8);
@@ -142,7 +141,7 @@ form{
     border-radius: 5px;
     font-weight: 800;
 }
-.form-container form input[type="submit"]:hover{
+input[type="submit"]:hover{
     background-color: rgb(73, 137, 202) ;
     transition: .5s;
 }
@@ -168,21 +167,21 @@ hr{
     outline: none;
     border: 1px solid rgba(247, 246, 242, 0.5);;
 }
-.sign{
+.log{
     margin: 3px auto 12px auto;
     width: 50%;
     text-align: center;
     font-size: 1rem;
 }
 .icons{
-    width:50%;
+    max-width:50%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 .icons i{
-    font-size: 1.8em;
+    font-size: 1.8rem;
     color: lightgray;
 }
 .icons i:hover{
@@ -190,43 +189,39 @@ hr{
     color: rgb(2, 27, 39);
 }
 
+/* for desktop view */
 @media  screen and (min-width:767px){
     h1{
-        font-size: 2.5em;
+        font-size: 2.5rem;
+    }
+    .fa-circle-user{
+        position: absolute;
+        top: -2.5rem ;
+        right: 50%;
+        transform: translate(50%, 50%);
+        font-size: 2.5rem;
     }
     .user{
-        font-size: 1.2em !important;
+        font-size: 1.2rem !important;
         font-weight: bold;
     }
     .fa-user, .fa-lock{
-        font-size: 0.9em;
+        font-size: 1rem;
+    }
+    .remember {
+        font-size: 1.1rem ;
     }
     input[type="submit"]{
-        height: 40px !important;
-        font-size: 1em;
+        height: 2.5rem;
+        font-size: 1.05rem;
     }
-    label, p, a{
+    label, .forget, .need, a{
         font-size: 1em ;
     }
+    .log{
+        font-size: 1.2rem;
+    }
+    .icons i{
+        font-size: 2rem;
+    }
 }
-@media screen and (min-width:1326px) {
-    h1{
-        font-size: 3em;
-    }
-    .user{
-        font-size: 1.5em !important;
-        font-weight: bold;
-    }
-    .fa-user, .fa-lock{
-        font-size: 1.2em;
-        /* left: 1.2em; */
-        left: 1.3em !important;
-    }
-    input[type="submit"]{
-        height: 45px !important;
-        font-size: 1.2em;
-    }
-    label, p{
-        font-size: 1.2em !important ;
-    }
-} 
