@@ -1,19 +1,28 @@
 body{
     margin: 0;
     padding: 0;
+    background-image: url(bg.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+    font-family: sans-serif;
 }
 
 /* main */
 main{
+    margin: 0;
     min-height: 100vh ;
-    background: linear-gradient(-30deg,rgb(3, 169, 244) 0%,rgb(58, 120, 183) 50%,rgb(38, 38, 38) 50%,rgb(96, 125, 139) 100%);
+    background-image: linear-gradient(-30deg,rgba(3, 169, 244, 0.5) 0%,rgba(58, 120, 183, 0.5) 50%,rgba(38, 38, 38, 0.5) 50%,rgba(96, 125, 139, 0.5) 100%);
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     animation-name:animate;
     animation-delay: 3s;
     animation-duration:5s;
     animation-iteration-count: infinite;
+    overflow-x: hidden;
 }
 @keyframes animate{
     from{
@@ -26,19 +35,18 @@ main{
 
 /* container */
 .form-container{
-    width: 60%;
-    /* max-width: 45%; */
+    width: 18.5rem;
     min-height: max-content;
-    padding: 1em 1.8em;
-    background-color: rgba(240, 240, 237, 0.3);
-    border: 4px solid rgba(240, 240, 237, 0.1);
-    border-radius: 5px;
+    padding: 1rem 1.8rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2px;
     font-family: 'Poppins', sans-serif;
-    color: white;
     animation-name: display;
     animation-duration: 3s;
     animation-iteration-count: 1;
-    box-sizing: content-box;
+    box-sizing: border-box;
+    text-align: center;
+    /* box-shadow: 0px 0px 4px 2px rgb(170, 170, 170); */
 }
 @keyframes display{
     from{
@@ -49,6 +57,7 @@ main{
     }
 }
 
+/* header */
 h1{
     width: 100%;
     text-align: center;
@@ -57,175 +66,106 @@ h1{
     font-weight: 700;
     font-size: 2rem;
     padding: 0;
-    margin: 0 0 40px 0;
+    margin: 0 0 1em 0;
     letter-spacing: 1px;
     font-style: normal;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* social media logins */
+.facebook, .twitter{
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    font-size: .8rem;
+    padding: .9em;
+    margin: .7em 0 auto auto;
+    border-radius: 30px;
+}
+.facebook:hover, .twitter:hover{
+    transform: scale(1.01);
+}
+.facebook{
+    background-color: rgba(4, 15, 110, 0.5);
+}
+.twitter{
+    background-color: rgb(26, 124, 156);
+}
+.fa-brands{
+    margin-right: .4em;
 }
 
 /* form */
-form{
-    position: relative;
-    border-top: 1px solid rgb(72, 72, 104);
-}
-.fa-circle-user{
-    position: absolute;
-    top: -2rem ;
-    right: 50%;
-    transform: translate(50%, 50%);
-    font-size: 2rem;
-}
-.input-container{
-    width:100%;
-    border: 1px solid rgba(247, 246, 242, 0.5);
-    border-radius: 5px;
-    margin: 20px 0;
-    height: 100%;
-    font-size: 1rem;
-    background: transparent;
-    position: relative;
+input:not(input[type="checkbox"]){
+    display: block;
+    width: 100%;   
     box-sizing: border-box;
-}
-.form-container .user:focus{
-    background: linear-gradient(-30deg,rgb(3, 169, 244) 0%,rgb(96, 125, 139) 100%);
-}
-.input-container:first-of-type{
-    margin-top: 40px !important;
-}
-.form-container div .user{
-    outline: none;
-    border: none;
-    background: transparent;
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-    padding: 7.5px 10%;
     font-size: 1rem;
-    width: 80%;
-    height: 100%;
-    border-radius: 5px;
+    padding: .6em;
+    border-radius: 30px;
+    border: 1.5px solid rgb(119, 136, 153);
+    margin: .5em 0 auto auto;
 }
-.fa-user{
-    position: absolute;
-    top: 10px;
-    left: 2.5%;
-    bottom: 10px;
-    font-size: 0.8rem;
+.user:focus{
+    outline: none;
+    background-color: rgb(252, 198, 207) ;
 }
-.fa-lock{
-    position: absolute;
-    top: 10px;
-    left: 2.5%;
-    bottom: 10px;
-    font-size: 0.8rem;
+.remember{
+    margin: 1em 0;
+    display: block;
+    text-align: left;
+    font-size: .9rem;
 }
-
-.user::placeholder{
-    color: rgb(168, 167, 167);
-}
-.remember {
-    font-weight: 300;
-    display: inline-block;
+.remember:hover{
     cursor: pointer;
-    margin-bottom: 10px;
-    font-size: 0.9rem;
-    display: flex;
-    align-items: center;
 }
 input[type="submit"]{
-    display: block;
-    width: 100%;
-    color: rgba(44, 42, 42, 0.8);
-    height: 35px;
-    border: 1px solid rgba(240, 240, 237, 0.5);
-    background: rgb(255, 255, 255);
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: 800;
+    background-color: rgb(252, 198, 207);
+    border: none !important;
+    padding: .8em !important;
+    color: white;
+    font-weight: bold;
 }
 input[type="submit"]:hover{
-    background-color: rgb(73, 137, 202) ;
-    transition: .5s;
-}
-a{
-    color: rgb(255, 255, 255);
-}
-a:hover{
-    color:rgb(96, 125, 139)
-}
-.forget, .need{
-    font-size: 0.9rem;
-    font-weight: 300;
-}
-.or{
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    margin: 25px auto 15px auto;
-    color: rgb(0, 0, 0);
-}
-hr{
-    width: 35%;
-    outline: none;
-    border: 1px solid rgba(247, 246, 242, 0.5);;
-}
-.log{
-    margin: 3px auto 12px auto;
-    width: 50%;
-    text-align: center;
-    font-size: 1rem;
-}
-.icons{
-    max-width:50%;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.icons i{
-    font-size: 1.8rem;
-    color: lightgray;
-}
-.icons i:hover{
     cursor: pointer;
-    color: rgb(2, 27, 39);
+    background-color: rgb(255, 183, 195);
 }
 
-/* for desktop view */
-@media  screen and (min-width:426px){
+/* sign up link */
+.form-container > p{
+    color: rgb(0, 0, 0);
+}
+.form-container > p > a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    transition: all 5s;
+}
+.form-container > p > a:hover{
+    text-decoration: underline;
+}
+
+/* footer */
+main > p{
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+@media  screen and (min-width:768px) {
     .form-container{
-        max-width: 350px !important;
+        width: 22rem;
     }
-    h1{
-        font-size: 2.5rem;
+    h3{
+        font-size: 1.7rem;
     }
-    .fa-circle-user{
-        position: absolute;
-        top: -2.5rem ;
-        right: 50%;
-        transform: translate(50%, 50%);
-        font-size: 2.5rem;
-    }
-    .user{
-        font-size: 1.1rem !important;
-        font-weight: bold;
-    }
-    .fa-user, .fa-lock{
+    .facebook, .twitter{
         font-size: 1rem;
     }
-    .remember {
-        font-size: 1rem ;
-    }
-    input[type="submit"]{
-        height: 2.5rem;
-        font-size: 1.05rem;
-    }
-    label, .forget, .need, a{
-        font-size: 1em ;
-    }
-    .log{
+    input:not(input[type="checkbox"]){
         font-size: 1.2rem;
     }
-    .icons i{
-        font-size: 2rem;
+    .remember{
+        font-size: 1.2rem;
     }
 }
