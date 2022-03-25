@@ -79,7 +79,7 @@ h1{
     text-decoration: none;
     color: rgb(255, 255, 255);
     font-size: .8rem;
-    padding: .9em;
+    padding: 1em;
     margin: .7em 0 auto auto;
     border-radius: 30px;
     font-weight: bold;
@@ -160,10 +160,10 @@ main > p{
         font-size: 1.7rem;
     }
     .facebook, .twitter{
-        font-size: 1rem;
+        font-size: .9rem;
     }
     input:not(input[type="checkbox"]){
-        font-size: 1.2rem;
+        font-size: 1.1rem;
     }
     .remember{
         font-size: 1.2rem;
